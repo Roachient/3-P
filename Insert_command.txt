@@ -1,0 +1,16 @@
+INSERT INTO `blog`.`posts` (
+`id` ,
+`username` ,
+`title` ,
+`description` ,
+`created`
+)
+VALUES (
+NULL , 'student', 'hi there', 'get this working', CURDATE( )
+);
+
+                                        //var title = $(this).dialog("txtTitle");
+                                        //var title = $("#txtTitle").val();
+                                        //alert($("txtTitle").val);
+                                        //var desc = $(this).dialog("#txtDescription").val;
+                                        //var desc = $("#txtDescription").val();

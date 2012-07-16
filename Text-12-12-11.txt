@@ -1,0 +1,168 @@
+//(function($){
+//    alert("2nd function");
+//    $(".btnAddComments").click(function() {
+//        alert("I'M Working for Comments");
+//    //set attr
+//    $("#createComment").attr("id", $id);
+//    $("#createComment").dialog(
+//                            {
+//                            modal:true,
+//                            height: 375,
+//                            width: 650,
+//                            buttons: {
+//                                    "Cancel": function() {
+//                                        $( this ).dialog( "close" );
+//                                    },
+//                                    "Create Comment": function() {
+//                                        var id = $.get("allBlogs", {"id":$id});
+//                                        alert(id);
+//                                        console.log(id);
+//                                        var description = $("#txtComDescription").val();
+//                                        $.get("addComment.php", {"title": title, "description": description},function(response){
+//                                        alert("post_id: " + $id);
+//                                        alert("Description: " + description);
+//                                        
+//                                    })
+//                                        $( this ).dialog( "close" );
+//                                    } 
+//                                    }
+//        })
+//    })
+//})(jQuery) 
+
+//    $("#btnAddBlog").click(function() {
+//    $("#deletePost").dialog(
+//                            {
+//                            modal:true,
+//                            height: 375,
+//                            width: 650,
+//                            buttons: {
+//                                    "Cancel": function() {
+//                                        $( this ).dialog( "close" );
+//                                    },
+//                                    "Create Post": function() {
+//                                        var title = $("#txtTitle").val();
+//                                        var description = $("#txtDescription").val();
+//                                        $.get("deleteBlogs.php", {"title": title, "description": description},function(response){
+//                                        //alert("Title: " + title);
+//                                        //alert("Description: " + description);
+//                                        $(this).parent().append;
+//                                    })
+//                                        $( this ).dialog( "close" );
+//                                    } 
+//                                    }
+//        })
+//    })
+// 
+//
+//}) 
+ 
+ 
+ 
+    
+//})
+
+//    $.ajax("allBlogs.php", {
+//        "dataType":"json",
+//        "success": function(blogs) {
+//            var bList = $("<ul></ul>").attr("id", "title");
+//            $("body").append(bList);
+//            $.each(blogs, processBlogs)
+//            }
+//    })
+
+
+
+//(function($){
+    //$(document).ready (function(){
+    //$("#btnAddComments").click(function() {
+    //    alert("I'm Dead in the water");
+    //$("#createComment").dialog(
+    //                        {
+    //                        modal:true,
+    //                        height: 375,
+    //                        width: 650,
+    //                        buttons: {
+    //                                "Cancel": function() {
+    //                                    $( this ).dialog( "close" );
+    //                                },
+    //                                "Create Post": function() {
+    //                                    var title = $("#txtTitle").val();
+    //                                    var description = $("#txtDescription").val();
+    //                                    $.get("addComment.php", {"title": title, "description": description},function(response){
+    //                                    alert("Title: " + title);
+    //                                    alert("Description: " + description);
+    //                                    $( this ).dialog( "close" );
+    //                                });
+    //                                } 
+    //                                }
+    //    });
+    //})
+//    })
+//})(jQuery)
+
+
+
+            <?php
+                
+                //$username = $_SESSION["USERNAME"];
+                //$db = new mysqli("127.0.0.1", "root", "", "blog");
+                //$sql = "SELECT * FROM comments";    
+                //$stmt = new mysqli_stmt($db, $sql);
+                //
+                //$stmt->execute();
+                //
+                //$stmt->bind_result($id, $username, $post_id, $description, $created);
+                //while($stmt->fetch()) {
+                //    //echo $id;
+                //    echo '<li id="' . $post_id . '">', ' Id: ' . $id . ' Description: ' . $description . '</li>';
+                //}
+                //
+                //$stmt->close();
+                //$db->close();
+            ?>
+
+
+
+                //$stmt->close();
+                //====================================
+                //$username3 = $_SESSION["USERNAME"];
+                //$db3 = new mysqli("127.0.0.1", "root", "", "blog");
+                //$sql3 = "SELECT p.username FROM posts p, comments c WHERE p.username = c.username";    
+                //$stmt3 = new mysqli_stmt($db3, $sql3);
+                //
+                //$stmt3->execute();
+                //
+                //$stmt3->bind_result($username);
+                //while($stmt3->fetch()) {
+                //    echo '<li id="' . $username . '" class="usr" >' . ' User: ' . $username . '<input class="btnDeleteBlog" type="button" value="Delete a BlogPost"></input></li>';
+                //}
+                //    
+                //$stmt3->close();
+                ////}
+                ////$stmt->close();
+
+
+
+
+
+            <div id="deletePost" title="Delete a Post" style="display:none" >
+
+                <div id=$post_user style="display:none"></div>
+
+                <div>Post Id:</div>
+                <div><input id="txtDeleteTitle" maxlength="50" type="text" /></div>
+                <div>Blog Post to be deleted:</div>
+                <div>
+                    <textarea id="txtDeleted" rows="5" cols="60"></textarea>
+                </div>
+            </div>
+
+
+
+
+                    $db3 = new mysqli("127.0.0.1", "root", "", "blog");
+                    $sql3 = "SELECT username FROM posts WHERE username = '$username3'";
+                    $stmt3 = new mysqli_stmt($db3, $sql3);
+                    $stmt3->execute();
+                    $stmt3->bind_result($user);
